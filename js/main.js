@@ -1,9 +1,18 @@
 $(document).ready(() => {
+  // When enter is pressed
   $("#searchForm").on("submit", e => {
+    console.log("Submit");
     e.preventDefault();
     let searchText = $("#searchText").val();
     getMovies(searchText);
   });
+
+  // When input changes
+  // $("#searchText").on("input", () => {
+  //   console.log("Input change");
+  //   let searchText = $("#searchText").val();
+  //   getMovies(searchText);
+  // });
 });
 
 function getMovies(searchText) {
@@ -18,12 +27,15 @@ function getMovies(searchText) {
         output += `
             <div class="col-md-3">
             <div class="well text-center">
-              <img src="${movie.Poster}">
+              <img src="${movie.Poster}"
+              onerror="this.src='img/poster-unavailable.jpg'; this.onerror='';" 
+               >
               <h5>${movie.Title} (${movie.Year}) </h5>
               <a onclick="movieSelected('${
                 movie.imdbID
               }')" class="btn btn-primary" href="#">Movie Details</a>
             </div>
+            <hr class="d-md-none" />
           </div>
         `;
       });
@@ -53,7 +65,9 @@ function getMovie() {
       output += `
       <div class="row">
       <div class="col-md-4">
-        <img src="${movie.Poster}" class="thumbnail">
+        <img src="${
+          movie.Poster
+        }" class="thumbnail" onerror="this.src='img/poster-unavailable.jpg'; this.onerror='';"  >
       </div>
       <div class="col-md-8">
         <h2 class="text-center">${movie.Title}</h2>
