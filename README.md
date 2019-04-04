@@ -1,6 +1,6 @@
 # Movies App
 
-JavaScript/jQuery app that fetches movie data from the OMDB API.
+jQuery app that fetches movie data from the OMDB API.
 
 ## Usage
 
