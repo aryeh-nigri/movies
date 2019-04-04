@@ -1,6 +1,7 @@
 # Movies App
 
-jQuery app that fetches movie data from the OMDB API.
+jQuery app that fetches movie data from the OMDB API. 
+Using BootStrap to get a responsive website, and also with elements that only show on mobile devices.
 
 ## Usage
 
