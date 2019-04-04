@@ -8,4 +8,4 @@ JavaScript/jQuery app that fetches movie data from the OMDB API.
 Run index.html on any server
 ```
 
-To change the theme, edit the link to the css folder.
+To change the theme, edit the links to the css file(on index.html and movie.html).
